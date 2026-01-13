@@ -25,5 +25,14 @@
     "category": "플라이 재료 (훅/실/깃털 등)",
     "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/4"
+  },
+  {
+    "id": 5,
+    "date": "2026-01-13",
+    "item": "리오 프리미어 그레이씨얼",
+    "amount": 99000,
+    "category": "라인/리더/티펫",
+    "memo": "http://www.anglerfly.co.kr/sub/order_list.html",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/5"
   }
 ]
