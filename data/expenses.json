@@ -44,5 +44,15 @@
     "store": "레인보우플라이",
     "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/6"
+  },
+  {
+    "id": 7,
+    "date": "2026-01-13",
+    "item": "엘피 그레파이트 리트렉터 - LP GRAPHITE RETRACTOR",
+    "amount": 15000,
+    "category": "기타",
+    "store": "레인보우플라이",
+    "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/7"
   }
 ]
