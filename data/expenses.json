@@ -16,5 +16,14 @@
     "category": "플라이 재료 (훅/실/깃털 등)",
     "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/3"
+  },
+  {
+    "id": 4,
+    "date": "2026-01-13",
+    "item": "트라웃헌터 플루오로카본 티펫 - TROUT HUNTER FLUOROCARBON TIPPET(4.5x)",
+    "amount": 22000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/4"
   }
 ]
