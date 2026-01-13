@@ -37,11 +37,20 @@ body:
     validations:
       required: true
   
+  - type: input
+    id: store
+    attributes:
+      label: 구매처
+      description: 구매한 곳 (온라인 쇼핑몰, 매장명 등)
+      placeholder: "예: 레인보우플라이, 앵글러플라이, 로컬 낚시점"
+    validations:
+      required: false
+  
   - type: textarea
     id: memo
     attributes:
       label: 메모 (선택)
       description: 추가 메모사항
-      placeholder: "구매처, 특이사항 등"
+      placeholder: "특이사항, 구매 이유 등"
     validations:
       required: false
