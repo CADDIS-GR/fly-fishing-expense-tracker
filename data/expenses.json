@@ -64,5 +64,15 @@
     "store": "레인보우플라",
     "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/8"
+  },
+  {
+    "id": 9,
+    "date": "2026-01-13",
+    "item": "트라웃헌터 플루오로카본 티펫 - TROUT HUNTER FLUOROCARBON TIPPET(4.5X)",
+    "amount": 22000,
+    "category": "라인/리더/티펫",
+    "store": "레인보우플라이",
+    "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/9"
   }
 ]
