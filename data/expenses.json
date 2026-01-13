@@ -84,5 +84,15 @@
     "store": "앵글러플라",
     "memo": "http://www.anglerfly.co.kr/sub/order_list.html",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/10"
+  },
+  {
+    "id": 11,
+    "date": "2026-01-13",
+    "item": "페인티드 텅스텐 비드(25개/팩) FL 챠트루스 2.4",
+    "amount": 11000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "store": "루어플라이하우스",
+    "memo": "https://lureflyhouse.co.kr/shop/orderinquiryview.php?od_id=2025120811122142&uid=2ae6071a915f82867ca7e527699e7ea0",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/11"
   }
 ]
