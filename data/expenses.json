@@ -7,5 +7,14 @@
     "category": "플라이 재료 (훅/실/깃털 등)",
     "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/2"
+  },
+  {
+    "id": 3,
+    "date": "2026-01-13",
+    "item": "스텐리스 아이스 오프 - STANLEY ICE OFF",
+    "amount": 10000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "memo": "https://rainbowfly.co.kr/myshop/order/list.html",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/3"
   }
 ]
