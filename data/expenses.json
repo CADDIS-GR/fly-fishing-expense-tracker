@@ -94,5 +94,15 @@
     "store": "루어플라이하우스",
     "memo": "https://lureflyhouse.co.kr/shop/orderinquiryview.php?od_id=2025120811122142&uid=2ae6071a915f82867ca7e527699e7ea0",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/11"
+  },
+  {
+    "id": 12,
+    "date": "2026-01-13",
+    "item": "페인티드 브라스 비드(50개/팩) FL 화이트 (2개)",
+    "amount": 9000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "store": "루어플라이하우스",
+    "memo": "https://lureflyhouse.co.kr/shop/orderinquiryview.php?od_id=2025120811122142&uid=2ae6071a915f82867ca7e527699e7ea0",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/12"
   }
 ]
