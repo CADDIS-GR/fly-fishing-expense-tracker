@@ -31,6 +31,7 @@ jobs:
             const itemMatch = body.match(/### 품목\s*\n\s*(.+)/);
             const amountMatch = body.match(/### 금액\s*\n\s*(.+)/);
             const categoryMatch = body.match(/### 카테고리\s*\n\s*(.+)/);
+            const storeMatch = body.match(/### 구매처\s*\n\s*(.+)/);
             const memoMatch = body.match(/### 메모 \(선택\)\s*\n\s*(.+)/);
             
             if (!itemMatch || !amountMatch || !categoryMatch) {
@@ -41,6 +42,7 @@ jobs:
             const item = itemMatch[1].trim();
             const amount = parseInt(amountMatch[1].trim().replace(/[^0-9]/g, ''));
             const category = categoryMatch[1].trim();
+            const store = storeMatch ? storeMatch[1].trim() : '';
             const memo = memoMatch ? memoMatch[1].trim() : '';
             
             // 날짜 정보
@@ -53,6 +55,7 @@ jobs:
               item: item,
               amount: amount,
               category: category,
+              store: store,
               memo: memo,
               issue_url: issue.html_url
             };
@@ -101,6 +104,7 @@ jobs:
                     `- **품목**: ${item}\n` +
                     `- **금액**: ${amount.toLocaleString('ko-KR')}원\n` +
                     `- **카테고리**: ${category}\n` +
+                    `- **구매처**: ${store || '미기재'}\n` +
                     `- **날짜**: ${date}`
             });
       
