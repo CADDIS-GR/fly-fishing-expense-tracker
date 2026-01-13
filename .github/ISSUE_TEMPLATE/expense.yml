@@ -1,0 +1,47 @@
+name: 💰 지출 기록
+description: 플라이 낚시 관련 지출을 기록합니다
+title: "[지출] "
+labels: ["expense"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: 품목
+      description: 구매한 물품이나 서비스
+      placeholder: "예: CDC 훅 #16 100개"
+    validations:
+      required: true
+  
+  - type: input
+    id: amount
+    attributes:
+      label: 금액
+      description: 지출 금액 (숫자만 입력)
+      placeholder: "25000"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: category
+    attributes:
+      label: 카테고리
+      description: 지출 카테고리를 선택하세요
+      options:
+        - 플라이 재료 (훅/실/깃털 등)
+        - 로드/릴 장비
+        - 라인/리더/티펫
+        - 입어료
+        - 교통비
+        - 식비
+        - 기타
+    validations:
+      required: true
+  
+  - type: textarea
+    id: memo
+    attributes:
+      label: 메모 (선택)
+      description: 추가 메모사항
+      placeholder: "구매처, 특이사항 등"
+    validations:
+      required: false
