@@ -114,5 +114,15 @@
     "store": "루어플라이하우",
     "memo": "https://lureflyhouse.co.kr/shop/orderinquiryview.php?od_id=2025120811122142&uid=2ae6071a915f82867ca7e527699e7ea0",
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/13"
+  },
+  {
+    "id": 14,
+    "date": "2026-01-13",
+    "item": "홀로그램 틴셀 블랙(SMALL))) (2개)",
+    "amount": 4000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "store": "루어라이하우스",
+    "memo": "https://lureflyhouse.co.kr/shop/orderinquiryview.php?od_id=2025120811122142&uid=2ae6071a915f82867ca7e527699e7ea0",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/14"
   }
 ]
