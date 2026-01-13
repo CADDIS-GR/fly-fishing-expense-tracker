@@ -1,0 +1,112 @@
+name: 지출 자동 기록
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  record-expense:
+    if: contains(github.event.issue.labels.*.name, 'expense')
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      issues: write
+    
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 지출 데이터 파싱 및 저장
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const issue = context.payload.issue;
+            
+            // Issue 본문에서 데이터 추출
+            const body = issue.body;
+            const itemMatch = body.match(/### 품목\s*\n\s*(.+)/);
+            const amountMatch = body.match(/### 금액\s*\n\s*(.+)/);
+            const categoryMatch = body.match(/### 카테고리\s*\n\s*(.+)/);
+            const memoMatch = body.match(/### 메모 \(선택\)\s*\n\s*(.+)/);
+            
+            if (!itemMatch || !amountMatch || !categoryMatch) {
+              console.log('필수 정보를 찾을 수 없습니다.');
+              return;
+            }
+            
+            const item = itemMatch[1].trim();
+            const amount = parseInt(amountMatch[1].trim().replace(/[^0-9]/g, ''));
+            const category = categoryMatch[1].trim();
+            const memo = memoMatch ? memoMatch[1].trim() : '';
+            
+            // 날짜 정보
+            const date = new Date().toISOString().split('T')[0];
+            
+            // 새 지출 항목
+            const newExpense = {
+              id: issue.number,
+              date: date,
+              item: item,
+              amount: amount,
+              category: category,
+              memo: memo,
+              issue_url: issue.html_url
+            };
+            
+            // 기존 데이터 읽기
+            let expenses = [];
+            const dataPath = 'data/expenses.json';
+            
+            try {
+              if (fs.existsSync(dataPath)) {
+                const data = fs.readFileSync(dataPath, 'utf8');
+                expenses = JSON.parse(data);
+              }
+            } catch (error) {
+              console.log('새 파일을 생성합니다.');
+              expenses = [];
+            }
+            
+            // 중복 체크 (같은 Issue ID면 업데이트)
+            const existingIndex = expenses.findIndex(e => e.id === issue.number);
+            if (existingIndex >= 0) {
+              expenses[existingIndex] = newExpense;
+            } else {
+              expenses.push(newExpense);
+            }
+            
+            // 날짜순 정렬 (최신순)
+            expenses.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            // data 폴더 생성
+            if (!fs.existsSync('data')) {
+              fs.mkdirSync('data', { recursive: true });
+            }
+            
+            // 파일 저장
+            fs.writeFileSync(dataPath, JSON.stringify(expenses, null, 2));
+            
+            console.log('지출 기록 완료:', newExpense);
+            
+            // Issue에 확인 댓글 달기
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: `✅ 지출이 기록되었습니다!\n\n` +
+                    `- **품목**: ${item}\n` +
+                    `- **금액**: ${amount.toLocaleString('ko-KR')}원\n` +
+                    `- **카테고리**: ${category}\n` +
+                    `- **날짜**: ${date}`
+            });
+      
+      - name: 변경사항 커밋
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/expenses.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "💰 지출 기록 업데이트: Issue #${{ github.event.issue.number }}" && git push)
