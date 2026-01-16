@@ -30,6 +30,16 @@
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/18"
   },
   {
+    "id": 19,
+    "date": "2026-01-16",
+    "item": "브라스 비드 (FL 화이트)",
+    "amount": 9000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "store": "루어플라이하우스",
+    "memo": "_No response_",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/19"
+  },
+  {
     "id": 2,
     "date": "2026-01-13",
     "item": "엘피 그레파이트 리트렉터 - LP GRAPHITE RETRACTOR",
