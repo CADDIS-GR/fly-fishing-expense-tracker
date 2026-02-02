@@ -30,6 +30,16 @@
     "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/25"
   },
   {
+    "id": 26,
+    "date": "2026-02-02",
+    "item": "하이테나 아쿠아닉스 ST 카본 티펫 (5X)",
+    "amount": 19000,
+    "category": "플라이 재료 (훅/실/깃털 등)",
+    "store": "앵글러플라이샵",
+    "memo": "_No response_",
+    "issue_url": "https://github.com/CADDIS-GR/fly-fishing-expense-tracker/issues/26"
+  },
+  {
     "id": 21,
     "date": "2026-01-22",
     "item": "UTC Wire (Red, Copper, Green, Black) BR (8ea)",
